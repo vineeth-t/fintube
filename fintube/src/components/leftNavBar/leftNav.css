@@ -1,0 +1,35 @@
+@import '../../style.css';
+
+.leftNav{
+display: flex;
+flex-direction: column;
+    background-color: var(--bg-color);
+    color:white;
+    height:100vh;
+    
+}
+.menu-item {
+    list-style: none;
+    width: fit-content;
+    /* width-fitcontent is important */
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    
+  }
+  .menu-item:hover {
+    fill: rgb(20, 150, 231);
+    color: rgba(29, 161, 242, 1);
+    background-color: rgba(29, 161, 242, 0.1);
+  }
+  
+  .svg-image {
+    font-weight: 800;
+    width: 20px;
+    height: 1.75rem;
+    margin-right: 1em;
+  }

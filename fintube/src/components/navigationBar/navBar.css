@@ -1,8 +1,10 @@
 @import '../../style.css';
 .navbar{
+
     position: sticky;
     z-index: 1;
     color:white;
+    background-color: var(--bg-color);
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -10,7 +12,7 @@
     justify-content: space-between;
     font-weight:1000;
     align-items: center;
-    padding:0.1rem;
+    padding:0.5rem;
     cursor:pointer; 
 }
 .nav-hambug{
@@ -36,6 +38,5 @@
     align-items: center;
 }
 .navbar-left div{
-    margin-left:2rem;
-    margin-right: 0.4rem;
+    margin:0 2rem 0 2rem;
 }
