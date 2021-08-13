@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {NavBar,LeftNav} from './components/index'
+import {NavBar,LeftNav,VideoPage} from './components/index'
 import {useLibraryContext} from '../src/Context/index'
 import './style.css'
 function App() {
@@ -8,7 +8,11 @@ function App() {
   return (
     <div className="App" style={themeColor}>
       <NavBar Route={Route} setState={SetRoute}/>
-      <LeftNav/>
+      <div className='App-hero'>
+         <LeftNav/>
+         <VideoPage/>
+      </div>
+      
     </div>
   );
 }

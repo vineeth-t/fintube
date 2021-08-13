@@ -1,0 +1,28 @@
+.video-list{
+    font-size:1rem;
+    font-weight: 100;
+    color:rgba(255, 255, 255, 0.76);
+    margin-left:15rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.video-card{
+    cursor:pointer;
+    padding:1rem;
+    width:18rem;
+}
+.thumbnail{
+    width:18rem;
+}
+.profile-icon{
+    border-radius:50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.75rem;
+}
+.video-content{
+    display: flex;
+    flex-direction: column;
+    
+}
