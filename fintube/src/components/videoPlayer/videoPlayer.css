@@ -1,0 +1,17 @@
+.media-player{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10rem;
+}
+.media-player-body{
+    display: flex;
+  
+}
+.media-list{
+    color:white;
+}
+.profile-info{
+    display: flex;
+    color:white;
+    padding-top:1rem;
+}

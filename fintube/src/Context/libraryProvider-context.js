@@ -1,28 +1,11 @@
 import { createContext, useContext, useState } from "react";
 
 export const LibraryContext=createContext()
-const themeColorWhite={
-   color:"black",
-   backgroundColor:"white"
 
-}
-const themeColorBlack={
-   color:"white",
-   backgroundColor:"black"
-
-}
 export function LibraryProvider({children}){
-  
-   const[themeColor,setThemeColor]=useState(themeColorWhite);
-   function colorChanger(color){
-      if(color==='light'){
-         setThemeColor(themeColorWhite)
-      }else{
-         setThemeColor(themeColorBlack)
-      }
-   }
-
-   return( <LibraryContext.Provider value={{themeColor,colorChanger}}>
+const [videoPlaying,setVideoPlaying]=useState({});
+const[videoPlayer,setVideoPlayer]=useState(false)
+   return( <LibraryContext.Provider value={{videoPlaying,setVideoPlaying,videoPlayer,setVideoPlayer}}>
         {children}
     </LibraryContext.Provider>
    )
@@ -30,3 +13,22 @@ export function LibraryProvider({children}){
 export function useLibraryContext(){
    return useContext(LibraryContext)
 }
+
+// const themeColorWhite={
+//    color:"black",
+//    backgroundColor:"white"
+
+// }
+// const themeColorBlack={
+//    color:"white",
+//    backgroundColor:"black"
+
+// }
+// const[themeColor,setThemeColor]=useState(themeColorWhite);
+// function colorChanger(color){
+//    if(color==='light'){
+//       setThemeColor(themeColorWhite)
+//    }else{
+//       setThemeColor(themeColorBlack)
+//    }
+// }
