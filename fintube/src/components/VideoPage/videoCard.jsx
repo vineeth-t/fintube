@@ -2,10 +2,10 @@ import { useLibraryContext } from '../../Context';
 import './videoList.css'
 export function VideoCard({video}){
     const {id,name,views,UploadedDate,likes,channelName,img}=video
-    const {videoPlaying,setVideoPlaying,setVideoPlayer}=useLibraryContext();
+    const {videoPlaying,setVideoPlaying,SetRoute}=useLibraryContext();
     function mediaPlayer(videoPlaying){
         setVideoPlaying(videoPlaying);
-        setVideoPlayer(true)
+        SetRoute('Video')
     }
     return(<div>
        {videoPlaying.id!==id && <div className='video-card' onClick={()=>mediaPlayer({id,name,views,UploadedDate,likes,channelName,img})}>
