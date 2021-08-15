@@ -8,9 +8,9 @@ export function VideoCard({video}){
         SetRoute('Video')
     }
     return(<div>
-       {videoPlaying.id!==id && <div className='video-card' onClick={()=>mediaPlayer({id,name,views,UploadedDate,likes,channelName,img})}>
+       {<div className='video-card' onClick={()=>mediaPlayer({id,name,views,UploadedDate,likes,channelName,img})}>
                       <img className='thumbnail' src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} />
-                      <div style={{display:"flex",justifyContent:"space-around"}}>
+                      <div style={{display:"flex",justifyContent:"space-around",color:'white'}}>
                           <div>
                             <img className='profile-icon' src={`${img}`}/>
                             </div>

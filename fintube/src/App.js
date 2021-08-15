@@ -1,4 +1,5 @@
-import {NavBar,LeftNav,VideoPage,VideoPlayer} from './components/index'
+import {NavBar,LeftNav,VideoPlayer} from './components/index'
+import {VideoPage,LikedVideos,WatchLater} from './Routes/index'
 import {useLibraryContext} from '../src/Context/index'
 import './style.css'
 function App() {
@@ -6,13 +7,11 @@ function App() {
   return (
     <div className="App">
       <NavBar Route={Route} setState={SetRoute}/>
-      <div className='App-hero'>
-         <LeftNav SetRoute={SetRoute}/>
-      </div>
+      <LeftNav SetRoute={SetRoute}/>
       {Route==='Home'&& <VideoPage/> }
       {Route==='Video' && <VideoPlayer/>}
-      {Route==='Liked' && <VideoPlayer/>}
-      {Route==='WatchLater' && <VideoPlayer/>}
+      {Route==='Liked' && <LikedVideos/>}
+      {Route==='WatchLater' && <WatchLater/>}
       {Route==='History' && <VideoPlayer/>}
     </div>
   );

@@ -4,8 +4,10 @@ export const LibraryContext=createContext()
 
 export function LibraryProvider({children}){
 const [videoPlaying,setVideoPlaying]=useState({});
+const [likedVideo,setLikedVideo]=useState([]);
+const [watchLater,setWatchLater]=useState([]);
 const[Route,SetRoute]=useState('Home');
-   return( <LibraryContext.Provider value={{videoPlaying,setVideoPlaying,Route,SetRoute}}>
+   return( <LibraryContext.Provider value={{watchLater,setWatchLater,likedVideo,setLikedVideo,videoPlaying,setVideoPlaying,Route,SetRoute}}>
         {children}
     </LibraryContext.Provider>
    )

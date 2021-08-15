@@ -28,16 +28,6 @@ export const  videoList=[
         likes:18
 
     },
-    
-        {
-        id:'lRlnDZ9zEpg',
-        channelName:'Varun Mayya',
-        img:'https://yt3.ggpht.com/ytc/AKedOLSqLOIYDn9ln7gpnkfJDrb61dPkbqnDWfRLLJGzlw=s176-c-k-c0x00ffffff-no-rj',
-        name:'5 tips on business teamwork I learned from games',
-        views:'6,139', 
-        UploadedDate:'May 19, 2021',
-        likes:540
-     },
     {
         id:'YAGTMboYp-k',
         channelName:'Varun Mayya',

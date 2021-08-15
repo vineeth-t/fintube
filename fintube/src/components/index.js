@@ -1,5 +1,3 @@
 export {NavBar} from './navigationBar/navigation'
 export{LeftNav} from './leftNavBar/leftNav'
-export {VideoPage} from './VideoPage/videoList'
 export {VideoPlayer} from './videoPlayer/videoPlayer'
-export {VideoCard} from './VideoPage/videoCard'

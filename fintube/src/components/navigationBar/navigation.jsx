@@ -3,11 +3,10 @@ import { useState } from 'react';
 import './navBar.css';
 import {useLibraryContext} from '../../Context/index'
 export function NavBar({Route,setState}){
-  const{colorChanger}=useLibraryContext()
-  const[hambug,sethambug]=useState('hambug')
+ 
     return (  
     <nav className='navbar' >
-         <div className='nav-hambug' onClick={()=>sethambug('hambug-view')}>
+         <div className='nav-hambug' >
               <svg width="2em" height="2em" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" fill="white"></path></svg>
              
             <a className='nav-link'>FT</a>
