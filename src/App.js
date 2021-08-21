@@ -3,11 +3,11 @@ import {VideoPage,LikedVideos,WatchLater} from './Routes/index'
 import {useLibraryContext} from '../src/Context/index'
 import './style.css'
 function App() {
-  const {Route,SetRoute}=useLibraryContext();
+  const {state:{Route},dispatch}=useLibraryContext();
   return (
     <div className="App">
-      <NavBar Route={Route} setState={SetRoute}/>
-      <LeftNav SetRoute={SetRoute}/>
+      <NavBar/>
+      <LeftNav/>
       {Route==='Home'&& <VideoPage/> }
       {Route==='Video' && <VideoPlayer/>}
       {Route==='Liked' && <LikedVideos/>}

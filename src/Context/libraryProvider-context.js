@@ -1,13 +1,18 @@
-import { createContext, useContext, useState } from "react";
-
+import { createContext, useContext, useReducer, useState } from "react";
+import { reducer } from "../Reducer/reducer";
 export const LibraryContext=createContext()
 
 export function LibraryProvider({children}){
-const [videoPlaying,setVideoPlaying]=useState({});
-const [likedVideo,setLikedVideo]=useState([]);
-const [watchLater,setWatchLater]=useState([]);
-const[Route,SetRoute]=useState('Home');
-   return( <LibraryContext.Provider value={{watchLater,setWatchLater,likedVideo,setLikedVideo,videoPlaying,setVideoPlaying,Route,SetRoute}}>
+const[state,dispatch]=useReducer(reducer, {
+                                              videoPlayingNow,
+                                              Route,
+                                              likedVideo,
+                                              watchLater
+                                          }
+                                       )
+                                 
+   return( 
+   <LibraryContext.Provider value={{state,dispatch}}>
         {children}
     </LibraryContext.Provider>
    )
@@ -15,7 +20,10 @@ const[Route,SetRoute]=useState('Home');
 export function useLibraryContext(){
    return useContext(LibraryContext)
 }
-
+export const videoPlayingNow={};
+export const Route='Home';
+export const likedVideo=[];
+export const watchLater=[];
 // const themeColorWhite={
 //    color:"black",
 //    backgroundColor:"white"
