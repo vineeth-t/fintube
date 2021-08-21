@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import './navBar.css';
 import {useLibraryContext} from '../../Context/index'
-export function NavBar({Route,setState}){
- 
+export function NavBar(){
+ const{state:{Route},dispatch}=useLibraryContext();
     return (  
     <nav className='navbar' >
          <div className='nav-hambug' >
