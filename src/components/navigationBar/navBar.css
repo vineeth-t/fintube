@@ -14,6 +14,9 @@
     padding:0.5rem;
     cursor:pointer; 
 }
+.notLeftNav{
+    display: none;
+}
 .nav-hambug{
     display: flex;
     justify-content: center;

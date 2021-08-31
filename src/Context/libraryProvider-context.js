@@ -7,7 +7,8 @@ const[state,dispatch]=useReducer(reducer, {
                                               videoPlayingNow,
                                               Route,
                                               likedVideo,
-                                              watchLater
+                                              watchLater,
+                                              hambug
                                           }
                                        )
                                  
@@ -24,6 +25,7 @@ export const videoPlayingNow={};
 export const Route='Home';
 export const likedVideo=[];
 export const watchLater=[];
+export const hambug='leftNav'
 // const themeColorWhite={
 //    color:"black",
 //    backgroundColor:"white"

@@ -1,9 +1,9 @@
 import { useLibraryContext } from '../../Context';
 import './leftNav.css';
 export function LeftNav({SetRoute}){
-  const{state:{Route},dispatch}=useLibraryContext();
+  const{state:{hambug},dispatch}=useLibraryContext();
     return (
-        <ul className='leftNav'>
+        <ul className={hambug}>
           <li  className="menu-item" onClick={()=>dispatch({type:'Route',route:'Home'})}>
             <svg className="svg-image" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z" fill="currentcolor"></path></svg> 
             <label className="item-name" >Home</label>
