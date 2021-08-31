@@ -1,0 +1,20 @@
+@import  '../VideoPage/videoList.css';
+.video-liked{
+    font-size:1rem;
+    font-weight: 100;
+    color:rgba(255, 255, 255, 0.76);
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+    .video-liked{
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}

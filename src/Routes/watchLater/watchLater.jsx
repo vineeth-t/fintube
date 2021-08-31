@@ -1,5 +1,6 @@
 import { useLibraryContext } from "../../Context";
 import { VideoCard } from "../VideoPage/videoCard";
+import './watchLater.css'
 
 export function WatchLater(){
         const {state:{watchLater}}=useLibraryContext();
