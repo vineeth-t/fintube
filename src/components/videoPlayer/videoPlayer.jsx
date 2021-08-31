@@ -3,10 +3,13 @@ import { videoList } from "../../dataBase";
 import { VideoCard } from "../../Routes/VideoPage/videoCard";
 import './videoPlayer.css';
 import '../../Routes/VideoPage/videoList';
+
 export const VideoPlayer = () => {
-  const {state:{videoPlayingNow},dispatch}=useLibraryContext();
+  const {state:{videoPlayingNow,toast},dispatch}=useLibraryContext();
   return(
+
   <div className='media-player-body'>
+     
        <div className="media-player">
               <iframe className='media-iframe'
                 src={`https://www.youtube.com/embed/${videoPlayingNow.id}`}
