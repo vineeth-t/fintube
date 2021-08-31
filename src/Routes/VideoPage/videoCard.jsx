@@ -3,8 +3,8 @@ import './videoList.css'
 export function VideoCard({video}){
     const {id,name,views,UploadedDate,likes,channelName,img}=video
     const {dispatch,SetRoute}=useLibraryContext();
-    return(<div>
-       {<div className='video-card' onClick={()=>dispatch({type:'videoHasToBePlayed',video:video})}>
+    return(
+       <div className='video-card' onClick={()=>dispatch({type:'videoHasToBePlayed',video:video})}>
                       <img className='thumbnail' src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} />
                       <div className='video-details'>
                             <div>
@@ -19,7 +19,7 @@ export function VideoCard({video}){
                             </div>
                         </div>
                       </div>  
-                </div>}
                 </div>
+           
     )
 }
