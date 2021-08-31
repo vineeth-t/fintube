@@ -6,16 +6,16 @@ export function VideoCard({video}){
     return(<div>
        {<div className='video-card' onClick={()=>dispatch({type:'videoHasToBePlayed',video:video})}>
                       <img className='thumbnail' src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} />
-                      <div style={{display:"flex",justifyContent:"space-around",color:'white'}}>
-                          <div>
-                            <img className='profile-icon' src={`${img}`}/>
+                      <div className='video-details'>
+                            <div>
+                                <img className='profile-icon' src={`${img}`} alt='profile-icon'/>
                             </div>
                             <div className='video-content'>
-                            <h5 style={{color:"white",marginBottom:'0.2rem'}}>{name}</h5>
-                            <h5>{channelName}</h5>
-                            <div style={{display:'flex'}}>
-                            <h6>{views} views .</h6>
-                            <h6>{UploadedDate}</h6>
+                                <h5 style={{color:"white",marginBottom:'0.2rem'}}>{name}</h5>
+                                <h5>{channelName}</h5>
+                                <div style={{display:'flex'}}>
+                                <h6>{views} views .</h6>
+                                <h6>{UploadedDate}</h6>
                             </div>
                         </div>
                       </div>  

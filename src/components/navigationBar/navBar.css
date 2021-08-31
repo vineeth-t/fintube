@@ -1,6 +1,5 @@
 @import '../../style.css';
 .navbar{
-
     position: sticky;
     z-index: 1;
     color:white;
@@ -36,7 +35,4 @@
     display:flex;
     justify-content: center;
     align-items: center;
-}
-.navbar-left div{
-    margin:0 2rem 0 2rem;
 }

@@ -1,15 +1,13 @@
 @import '../../style.css';
 
 .leftNav{
-  position: fixed;
+    position: fixed;
     display: flex;
     flex-direction: column;
     color:white;
     height:200vh;
     width:10rem;
-    padding:0;
-    
-    
+    padding:0;  
 }
 .menu-item {
   position: sticky;
@@ -40,4 +38,9 @@
     width: 20px;
     height: 1.75rem;
     margin-right: 1em;
+  }
+  @media screen and (max-width: 768px) {
+    .leftNav{
+      display: none;
+    }
   }
