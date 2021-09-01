@@ -11,7 +11,7 @@ export function VideoCard({video}){
                                 <img className='profile-icon' src={`${img}`} alt='profile-icon'/>
                             </div>
                             <div className='video-content'>
-                                <h5 style={{color:"white",marginBottom:'0.2rem'}}>{name}</h5>
+                                <h5>{name}</h5>
                                 <h5>{channelName}</h5>
                                 <div style={{display:'flex'}}>
                                 <h6>{views} views .</h6>

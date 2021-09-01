@@ -1,20 +1,12 @@
-@import  '../VideoPage/videoList.css';
-.video-liked{
+@import url('../VideoPage/videoList.css');
+.watch-later{
     font-size:1rem;
     font-weight: 100;
     color:rgba(255, 255, 255, 0.76);
+    text-align: center;
     margin: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-@media screen and (max-width: 768px) {
-    .video-liked{
-        margin: 0;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

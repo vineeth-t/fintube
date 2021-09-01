@@ -1,12 +1,8 @@
-@import  '../VideoPage/videoList.css';
-.video-liked{
-    font-size:1rem;
-    font-weight: 100;
-    color:rgba(255, 255, 255, 0.76);
-    margin-left:10rem;
+.liked-videos{
+    text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    color:white
 }
