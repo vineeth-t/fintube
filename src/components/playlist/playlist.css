@@ -1,0 +1,18 @@
+.playlist-card{
+    position: absolute;
+    bottom: -7.5rem;
+    left:35rem;
+    color:white;
+    border:1px solid white;
+    height:100px;
+}
+.playlist{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+@media screen and(max-width:765px){
+    .playlist-card{
+      display: none;
+    } 
+}

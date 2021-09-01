@@ -6,3 +6,9 @@
     justify-content: center;
     color:white
 }
+@media screen and(max-width:765px) {
+    .liked-videos{
+        display:flex;
+        flex-direction: column;
+    }
+}

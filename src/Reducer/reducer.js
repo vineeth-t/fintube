@@ -5,7 +5,7 @@ export function reducer(state,action){
         case 'likedVideo':
             if(state.likedVideo.some((video)=>video.id===action.video.id)){
                 return {
-                    ...state,toast:'videoUnLiked',likedVideo:[...state.likedVideo.filter((video)=>video.id!==action.video.id)]
+                    ...state,likedVideo:[...state.likedVideo.filter((video)=>video.id!==action.video.id)],toast:'videoUnLiked'
                 }
             }
             return {...state,likedVideo:[...state.likedVideo,action.video],toast:'videoLiked'}
