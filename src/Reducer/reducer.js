@@ -12,7 +12,7 @@ export function reducer(state,action){
         case 'watchLater':
             if(state.watchLater.some((video)=>video.id===action.video.id)){
                 return {
-                    ...state,toast:'removedFromWatchList',watchLater:[...state.watchLater.filter((video)=>video.id!==action.video.id)]
+                    ...state,toast:'alreadyInWatchLater',playlist:''
                 }
             }
             return {...state,watchLater:[...state.watchLater,action.video],toast:'AddedToWatchLater'}
@@ -22,5 +22,10 @@ export function reducer(state,action){
             return {...state,hambug:action.payload}
         case 'removeToast':
             return{...state,toast:''}
+        case 'save':
+            if(state.playlist==='openPlaylist'){
+                return{...state,playlist:''}
+            }
+            return{...state,playlist:'openPlaylist'}
     }
 }

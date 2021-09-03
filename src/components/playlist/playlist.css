@@ -9,7 +9,9 @@
 .playlist{
     padding: 1rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+ 
 }
 @media screen and(max-width:765px){
     .playlist-card{

@@ -6,11 +6,10 @@ import { useState } from "react";
 import './videoPlayer.css';
 import '../../Routes/VideoPage/videoList';
 export const VideoPlayer = () => {
-  const[playlist,setPlaylist]=useState('')
-  const {state:{videoPlayingNow,toast},dispatch}=useLibraryContext();
+  const {state:{videoPlayingNow,playlist},dispatch}=useLibraryContext();
   return(
   <div className='media-player-body'>
-    {playlist==='openPlaylist'&&<CreatePlaylist />}
+    {playlist==='openPlaylist'&&<CreatePlaylist/>}
        <div className="media-player">
               <iframe className='media-iframe'
                 src={`https://www.youtube.com/embed/${videoPlayingNow.id}`}
@@ -33,7 +32,7 @@ export const VideoPlayer = () => {
                         <label>{videoPlayingNow.likes}</label>
                         <svg width="1.4em" height="1.5em" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31l.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5z" fill="currentColor"></path></svg>
                     </div>
-                    <div className='media-watch-later' onClick={()=>playlist===''?setPlaylist('openPlaylist'):setPlaylist('')} >
+                    <div className='media-watch-later' onClick={()=>dispatch({type:'save'})} >
                         <svg width="1.4em" height="1.5em" viewBox="0 0 24 24"><path d="M6 4h10.586L20 7.414V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm0 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7.914L16.086 5H15v5H6V5zm1 0v4h7V5H7zm5 7a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm0 1a2 2 0 1 0 0 4a2 2 0 0 0 0-4z" fill="currentColor"></path></svg>
                         <label>Save</label>
                     </div>

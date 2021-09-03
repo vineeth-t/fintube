@@ -10,6 +10,7 @@ export function NavBar(){
           {toast==='AddedToWatchLater'&&<Toast msg={'Added To watch later'}/>}
         {toast==='videoLiked'&&<Toast msg={'Video Liked'}/>}
         {toast==='videoUnLiked'&&<Toast msg={'Video unliked'}/>}
+        {toast==='alreadyInWatchLater'&&<Toast msg={'Video is already added'}/>}
         {toast==='removedFromWatchList'&&<Toast msg={'Removed From WatchList'}/>}
          <div className='nav-hambug' >
             <svg onClick={()=>hambug==='leftNav'?dispatch({type:'hambug',payload:'notLeftNav'}):dispatch({type:'hambug',payload:'leftNav'})} width="2em" height="2em" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" fill="white"></path></svg>
