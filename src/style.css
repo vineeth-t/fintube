@@ -10,5 +10,8 @@
    --secondary-color:rgb(240, 73, 73);
    --bg-color:rgb(29, 27, 27);
 }
-
+a{
+    text-decoration: none;
+    color:white;
+}
 

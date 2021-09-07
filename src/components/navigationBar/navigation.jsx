@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './navBar.css';
 import {useLibraryContext} from '../../Context/index'
 import { Toast } from "../toast/toast";
@@ -14,8 +14,10 @@ export function NavBar(){
         {toast==='removedFromWatchList'&&<Toast msg={'Removed From WatchList'}/>}
          <div className='nav-hambug' >
             <svg onClick={()=>hambug==='leftNav'?dispatch({type:'hambug',payload:'notLeftNav'}):dispatch({type:'hambug',payload:'leftNav'})} width="2em" height="2em" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" fill="white"></path></svg>
-            <a className='nav-link'>FT</a>
+            <NavLink to='/' className='nav-icon'>
+            <span className='nav-link'>FT</span>
             <h2>FinTube</h2>
+            </NavLink>
          </div>
          <div className='navbar-left'>
             <div className='navbar-items login'>

@@ -9,6 +9,10 @@
     width:10rem;
     padding:0;  
 }
+.active{
+  fill: var( --secondary-color);
+  color: var( --secondary-color);
+}
 .menu-item {
   position: sticky;
   margin-left:0.5rem;

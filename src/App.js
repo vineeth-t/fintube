@@ -1,18 +1,21 @@
 import {NavBar,LeftNav,VideoPlayer} from './components/index'
 import {VideoPage,LikedVideos,WatchLater} from './Routes/index'
 import {useLibraryContext} from '../src/Context/index'
+import {Route,Routes} from 'react-router-dom'
 import './style.css'
 function App() {
-  const {state:{Route},dispatch}=useLibraryContext();
+  const {dispatch}=useLibraryContext();
   return (
     <div className="App">
       <NavBar/>
       <LeftNav/>
-      {Route==='Home'&& <VideoPage/> }
-      {Route==='Video' && <VideoPlayer/>}
-      {Route==='Liked' && <LikedVideos/>}
-      {Route==='WatchLater' && <WatchLater/>}
-      {Route==='History' && <VideoPlayer/>}
+      <Routes>
+        <Route path='/' element={<VideoPage/>}/>
+        <Route path='/videoPlayer' element={<VideoPlayer/>}/>
+        <Route path='/likedVideos' element={<LikedVideos/>}/>
+        <Route path='/watchLater' element={<WatchLater/>}/>
+        <Route path='/history' element={<VideoPlayer/>}/>
+      </Routes>
     </div>
   );
 }
