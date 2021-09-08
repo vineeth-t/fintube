@@ -5,7 +5,7 @@ export function VideoCard({video}){
     const {id,name,views,UploadedDate,likes,channelName,img}=video
     const {dispatch}=useLibraryContext();
     return(
-    <Link to='/videoPlayer'>
+    <Link to={`/videoPlayer/${id}`}>
        <div className='video-card' onClick={()=>dispatch({type:'videoHasToBePlayed',video:video})}>
                       <img className='thumbnail' src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} />
                       <div className='video-details'>

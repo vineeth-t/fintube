@@ -11,7 +11,7 @@ function App() {
       <LeftNav/>
       <Routes>
         <Route path='/' element={<VideoPage/>}/>
-        <Route path='/videoPlayer' element={<VideoPlayer/>}/>
+        <Route path='/videoPlayer/:videoId' element={<VideoPlayer/>}/>
         <Route path='/likedVideos' element={<LikedVideos/>}/>
         <Route path='/watchLater' element={<WatchLater/>}/>
         <Route path='/history' element={<VideoPlayer/>}/>
