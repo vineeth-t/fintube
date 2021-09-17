@@ -18,16 +18,7 @@ export const  videoList=[
         likes:18
 
     },
-    {
-        id:'sCBK189Z3Oo',
-        channelName:'Varun Mayya',
-        img:'https://yt3.ggpht.com/ytc/AKedOLSqLOIYDn9ln7gpnkfJDrb61dPkbqnDWfRLLJGzlw=s176-c-k-c0x00ffffff-no-rj',
-        name:"Why Do People Hate Rich People? (and why they're wrong)",
-        views:' 8,298 ',
-        UploadedDate:' Jul 16, 2021',
-        likes:18
 
-    },
     {
         id:'YAGTMboYp-k',
         channelName:'Varun Mayya',
@@ -37,14 +28,15 @@ export const  videoList=[
         UploadedDate:'Streamed live on Nov 28, 2019',
         likes:565
     },
-     {
-        id:'VCBBHqyv4dg',
-        channelName:'Varun Mayya',
-        img:'https://yt3.ggpht.com/ytc/AKedOLSqLOIYDn9ln7gpnkfJDrb61dPkbqnDWfRLLJGzlw=s176-c-k-c0x00ffffff-no-rj',
-        name:'INTRODUCING METASTARTUP CODE | METASTARTUP #23',
-        views:'2,786 ', 
-        UploadedDate:'Feb 4, 2019',
-        likes:127
+    {
+        id:'Xn7KWR9EOGQ',
+        channelName:'CA Rachana Phadke Ranade',
+	    img:'https://yt3.ggpht.com/ytc/AKedOLSA3Tow9_-RTNU6WslhjukZuknVu3JzcGiCMumw5g=s176-c-k-c0x00ffffff-no-rj',
+        name:"Basics of Stock Market For Beginners Lecture 1 By CA Rachana Phadke Ranade",
+        views:'16,943,160',
+        UploadedDate:'Feb 12, 2019',
+        likes:439
+
     },
     {
             id:'nH6WUTFmgg8',

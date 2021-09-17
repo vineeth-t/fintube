@@ -1,10 +1,14 @@
 import {NavBar,LeftNav,VideoPlayer} from './components/index'
-import {VideoPage,LikedVideos,WatchLater} from './Routes/index'
-import {useLibraryContext} from '../src/Context/index'
+import {VideoPage,LikedVideos,WatchLater,History} from './Routes/index'
 import {Route,Routes} from 'react-router-dom'
+import { Navigate } from 'react-router'
 import './style.css'
+import { useState } from 'react/cjs/react.development'
 function App() {
-  const {dispatch}=useLibraryContext();
+const[isUserLoggedIn,setLogin]=useState(true)
+function PrivateRoute({...props}){
+    return  isUserLoggedIn?<Route {...props}/>:<Navigate to='/'/>
+}
   return (
     <div className="App">
       <NavBar/>
@@ -12,9 +16,9 @@ function App() {
       <Routes>
         <Route path='/' element={<VideoPage/>}/>
         <Route path='/videoPlayer/:videoId' element={<VideoPlayer/>}/>
-        <Route path='/likedVideos' element={<LikedVideos/>}/>
-        <Route path='/watchLater' element={<WatchLater/>}/>
-        <Route path='/history' element={<VideoPlayer/>}/>
+        <PrivateRoute path='/likedVideos' element={<LikedVideos/>}/>
+        <PrivateRoute path='/watchLater' element={<WatchLater/>}/>
+        <PrivateRoute path='/history' element={<History/>}/>
       </Routes>
     </div>
   );

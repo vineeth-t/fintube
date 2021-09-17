@@ -1,7 +1,7 @@
 export function reducer(state,action){
     switch(action.type){
         case 'videoHasToBePlayed':
-            return {...state,videoPlayingNow:action.video}
+            return {...state,videoPlayingNow:action.video,history:[...state.history,action.video]}
         case 'likedVideo':
             if(state.likedVideo.some((video)=>video.id===action.video.id)){
                 return {

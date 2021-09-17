@@ -8,7 +8,7 @@ const[state,dispatch]=useReducer(reducer, {
                                               Route,
                                               likedVideo,
                                               watchLater,
-                                              hambug,toast,playlist
+                                              hambug,toast,playlist,history
                                           }
                                        )
                                  
@@ -28,21 +28,4 @@ export const watchLater=[];
 export const hambug='leftNav';
 export const toast='';
 export const playlist=''
-// const themeColorWhite={
-//    color:"black",
-//    backgroundColor:"white"
-
-// }
-// const themeColorBlack={
-//    color:"white",
-//    backgroundColor:"black"
-
-// }
-// const[themeColor,setThemeColor]=useState(themeColorWhite);
-// function colorChanger(color){
-//    if(color==='light'){
-//       setThemeColor(themeColorWhite)
-//    }else{
-//       setThemeColor(themeColorBlack)
-//    }
-// }
+export const history=[]
