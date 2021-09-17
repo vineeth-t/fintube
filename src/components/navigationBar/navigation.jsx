@@ -3,20 +3,18 @@ import { NavLink } from 'react-router-dom';
 import './navBar.css';
 import {useLibraryContext} from '../../Context/index'
 import { Toast } from "../toast/toast";
+
+
 export function NavBar(){
  const{state:{hambug,toast},dispatch}=useLibraryContext();
     return (  
     <nav className='navbar'>
-          {toast==='AddedToWatchLater'&&<Toast msg={'Added To watch later'}/>}
-        {toast==='videoLiked'&&<Toast msg={'Video Liked'}/>}
-        {toast==='videoUnLiked'&&<Toast msg={'Video unliked'}/>}
-        {toast==='alreadyInWatchLater'&&<Toast msg={'Video is already added'}/>}
-        {toast==='removedFromWatchList'&&<Toast msg={'Removed From WatchList'}/>}
+         <Toast msg={toast}/>
          <div className='nav-hambug' >
             <svg onClick={()=>hambug==='leftNav'?dispatch({type:'hambug',payload:'notLeftNav'}):dispatch({type:'hambug',payload:'leftNav'})} width="2em" height="2em" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" fill="white"></path></svg>
             <NavLink to='/' className='nav-icon'>
-            <span className='nav-link'>FT</span>
-            <h2>FinTube</h2>
+                  <span className='nav-link'>FT</span>
+                  <h2>FinTube</h2>
             </NavLink>
          </div>
          <div className='navbar-left'>

@@ -2,7 +2,6 @@ import { useLibraryContext } from "../../Context";
 import { videoList } from "../../dataBase";
 import { VideoCard } from "../../Routes/VideoPage/videoCard";
 import { CreatePlaylist } from "../playlist/playlist";
-import { useState } from "react";
 import './videoPlayer.css';
 import '../../Routes/VideoPage/videoList';
 export const VideoPlayer = () => {
@@ -12,11 +11,12 @@ export const VideoPlayer = () => {
     {playlist==='openPlaylist'&&<CreatePlaylist/>}
        <div className="media-player">
               <iframe className='media-iframe'
-                src={`https://www.youtube.com/embed/${videoPlayingNow.id}`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen></iframe> 
+                       src={`https://www.youtube.com/embed/${videoPlayingNow.id}`}
+                       title="YouTube video player"
+                       frameBorder="0"
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen>
+              </iframe> 
                 <div className='profile-info'>
                       <div className='media-heading'>
                           <h5>{videoPlayingNow.name}</h5>

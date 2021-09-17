@@ -1,0 +1,16 @@
+.library-list{
+
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:white
+}
+.library-list > div{
+    padding:3rem;
+    margin:1rem;
+    width:10rem;
+    height:7rem;
+    background-color: rgb(192, 47, 47);
+}

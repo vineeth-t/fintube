@@ -1,5 +1,5 @@
 import {NavBar,LeftNav,VideoPlayer} from './components/index'
-import {VideoPage,LikedVideos,WatchLater,History} from './Routes/index'
+import {VideoPage,LikedVideos,WatchLater,History,Library} from './Routes/index'
 import {Route,Routes} from 'react-router-dom'
 import { Navigate } from 'react-router'
 import './style.css'
@@ -16,6 +16,7 @@ function PrivateRoute({...props}){
       <Routes>
         <Route path='/' element={<VideoPage/>}/>
         <Route path='/videoPlayer/:videoId' element={<VideoPlayer/>}/>
+        <PrivateRoute path='/library' element={<Library/>}/>
         <PrivateRoute path='/likedVideos' element={<LikedVideos/>}/>
         <PrivateRoute path='/watchLater' element={<WatchLater/>}/>
         <PrivateRoute path='/history' element={<History/>}/>

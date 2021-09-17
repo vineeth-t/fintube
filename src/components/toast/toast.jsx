@@ -10,7 +10,7 @@ export function Toast({msg}){
         return()=>{
             clearTimeout(timeOut)
         } 
-    },[])
+    })
     return (
         <div className='toast'>
             <h5>{msg}</h5>
