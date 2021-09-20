@@ -16,8 +16,6 @@ export function reducer(state,action){
                 }
             }
             return {...state,watchLater:[...state.watchLater,action.video],toast:'Added To WatchLater'}
-        case 'Route':
-            return{...state,Route:action.route}
         case 'hambug':
             return {...state,hambug:action.payload}
         case 'removeToast':
