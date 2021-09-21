@@ -1,6 +1,6 @@
 .playlist-card{
-    position: absolute;
-    bottom: -7.5rem;
+    position: absolute; 
+    bottom:-5.5rem;
     left:35rem;
     color:white;
     border:1px solid white;
@@ -13,8 +13,27 @@
     justify-content: center;
  
 }
-@media screen and(max-width:765px){
-    .playlist-card{
-      display: none;
-    } 
+input[type='text']{
+    color:white;
+}
+.playlist-creator{
+    display: flex;
+    flex-direction: column;
+}
+.btn-submit{
+    color:red;
+    border:none;
+   
+
+}
+@media screen and (max-width: 768px){
+    .playlist-card{ 
+        top:7rem;
+        left:7rem;
+        height:100px;
+        width:fit-content
+    }
+    .playlist{
+        padding: 0.5rem;
+    }
 }
